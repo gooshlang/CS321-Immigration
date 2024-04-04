@@ -14,8 +14,8 @@ public class Immigrant {
     private String LastNameDependent;
 
     private int visaID;
-    int accessGranted = 0; //0 not granted 1 granted ADAM
-    int approval = 0; //0 not granted 1 granted MATT
+    private int accessGranted = 0; //0 not granted 1 granted ADAM
+    private int approval = 0; //0 not granted 1 granted MATT
 
     public Immigrant(String firstName, String lastName, String dob, String gender, String nationality, String address, String phoneNumber, String email, String dependent, String firstNameDependent, String lastNameDependent, int visaID) {
         this.firstName = firstName;

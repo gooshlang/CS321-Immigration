@@ -57,10 +57,11 @@ public class ApplicationDriver extends Application {
     // Method to handle successful login for approval
     public void handleSuccessfulLoginApprove() {
         Stage approveStage = new Stage();
+        Approve approve = new Approve();
         // Close the login window
         login.stop();
-        // Open the data entry window
-     //   dataEntry.start(approveStage);
+
+        approve.start(approveStage);
 
         // Set event handler for when data entry window closes
         approveStage.setOnCloseRequest(event -> {
