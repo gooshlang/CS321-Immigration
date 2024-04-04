@@ -1,0 +1,12 @@
+
+š
+java:S1192U"RDefine a constant instead of duplicating this literal "Login successful!" 3 times.(õ–¢øÿÿÿÿ8ŸÃï½ê1J$cdcccf96-ce8f-4033-b764-84bf49baeb3c
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æçÌo8°ìë½ê1J$8051c283-6dc1-427c-9c47-d929005bb771
+‚
+java:S1161&":Add the "@Override" annotation above this method signature(À–®»ÿÿÿÿÿ8Üìë½ê1J$e2a3153b-5f2c-40cb-a8a3-1a9dd603bcd1
+}
+java:S2209L"5Change this instance-reference to a static reference.(é¾Öƒıÿÿÿÿ8èìë½ê1J$2c3d3c4d-6c60-43a9-9bca-b287b2823c75
+W
+java:S1128"5Remove this unused import 'javafx.event.ActionEvent'.(î•¯¼ıÿÿÿÿ8›ÿîÀê1
+S
+java:S1128"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8›ÿîÀê1

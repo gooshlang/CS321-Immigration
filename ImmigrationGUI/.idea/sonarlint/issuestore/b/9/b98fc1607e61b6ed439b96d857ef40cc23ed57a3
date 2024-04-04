@@ -1,0 +1,18 @@
+
+‹
+java:S1319"nThe type of "immigrantList" should be an interface such as "List" rather than the implementation "LinkedList".(©Ù›ü8ê­„¿ê1
+v
+java:S1104"YMake immigrantList a static final constant or non-public and provide accessors if needed.(©Ù›ü8ë­„¿ê1
+P
+java:S1444"3Make this "public static immigrantList" field final(©Ù›ü8ì­„¿ê1
+›	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æçÌo8úÆÝ¾ê1J$2e21fdb5-3bb9-4237-b717-dde7d60a281d
+:
+java:S2386"Make this member "protected".(©Ù›ü8ù­„¿ê1
+b
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(©Ù›ü8þ­„¿ê1
+H
+java:S1602"",Remove useless curly braces around statement(Ó‚ä58Œ®„¿ê1
+I
+java:S16021",Remove useless curly braces around statement(ŽË½Ö8‘®„¿ê1
+H
+java:S1602@",Remove useless curly braces around statement(èºÇe8“®„¿ê1

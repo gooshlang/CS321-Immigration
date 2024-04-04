@@ -1,0 +1,12 @@
+
+”	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æçÌoJ$f99269ef-c72d-4966-a2ca-9bb8b070ed64
+ƒ	java:S107"AConstructor has 9 parameters, which is greater than 7 authorized.(îù®ª8è´’¾ê1J$570be5b8-c46f-4b40-9d29-96bc6a9af48b
+r	java:S106n"+Replace this use of System.out by a logger.(Ş²Áòüÿÿÿÿ8Á¾‘¿ê1J$9b19a36e-ab5b-4480-88f0-827371642e0e
+m	java:S106o"+Replace this use of System.out by a logger.(½Ôü˜8Â¾‘¿ê1J$3300c585-d827-4b1a-a367-4c5d41084f29
+r	java:S106p"+Replace this use of System.out by a logger.(¶­áĞûÿÿÿÿ8Â¾‘¿ê1J$8c5fa647-a8ab-4ebc-adb0-d2f307f59608
+r	java:S106q"+Replace this use of System.out by a logger.(¦¨Ô¼ûÿÿÿÿ8Ã¾‘¿ê1J$6d249d54-819e-4e6e-b5c6-69ff50605847
+r	java:S106r"+Replace this use of System.out by a logger.(òªÚøşÿÿÿÿ8Ã¾‘¿ê1J$cb49adcf-021b-426c-a7ac-41397a130573
+m	java:S106s"+Replace this use of System.out by a logger.(š€àÆ8Ã¾‘¿ê1J$cf8a0be3-11a0-4bc9-8b2e-0b8b37d2c121
+r	java:S106t"+Replace this use of System.out by a logger.(Ô¹áÿÿÿÿÿ8Ä¾‘¿ê1J$102f1ba6-6c94-4961-9139-16f1d6305669
+r	java:S106u"+Replace this use of System.out by a logger.(ÜÅÉÓÿÿÿÿÿ8Å¾‘¿ê1J$a6899a6b-25b1-424a-b97b-bcadc6dda9c0
+r	java:S106v"+Replace this use of System.out by a logger.(Ëï·²øÿÿÿÿ8Å¾‘¿ê1J$5066e86e-6a35-490a-a621-f5eb1b5f2261

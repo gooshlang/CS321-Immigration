@@ -1,0 +1,7 @@
+
+u	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(æçÌo8ÀÊŸ¿ê1
+v
+java:S1450"TRemove the "stage" field and declare it as a local variable in the relevant methods.(†ë†¬üÿÿÿÿ8éÊŸ¿ê1
+W
+java:S2209m"5Change this instance-reference to a static reference.(é¾Öƒıÿÿÿÿ8øÊŸ¿ê1
+M	java:S106’"+Replace this use of System.out by a logger.(õÖ˜íúÿÿÿÿ8üÊŸ¿ê1
