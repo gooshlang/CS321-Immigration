@@ -9,11 +9,15 @@ public class Immigrant {
     private String address;
     private String phoneNumber;
     private String email;
-    private String patientType;
+    private String dependent;
+    private String FirstNameDependent;
+    private String LastNameDependent;
 
+    private int visaID;
     int accessGranted = 0; //0 not granted 1 granted
+    int approval = 0; //0 not granted 1 granted
 
-    public Immigrant(String firstName, String lastName, String dob, String gender, String nationality, String address, String phoneNumber, String email, String patientType) {
+    public Immigrant(String firstName, String lastName, String dob, String gender, String nationality, String address, String phoneNumber, String email, String dependent, String firstNameDependent, String lastNameDependent, int visaID) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dob = dob;
@@ -22,9 +26,11 @@ public class Immigrant {
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.email = email;
-        this.patientType = patientType;
+        this.dependent = dependent;
+        FirstNameDependent = firstNameDependent;
+        LastNameDependent = lastNameDependent;
+        this.visaID = visaID;
     }
-
 
     public String getFirstName() {
         return firstName;
@@ -90,12 +96,12 @@ public class Immigrant {
         this.email = email;
     }
 
-    public String getPatientType() {
-        return patientType;
+    public String getDependent() {
+        return dependent;
     }
 
-    public void setPatientType(String patientType) {
-        this.patientType = patientType;
+    public void setDependent(String dependent) {
+        this.dependent = dependent;
     }
 
     public int getAccessGranted() {
@@ -104,6 +110,38 @@ public class Immigrant {
 
     public void setAccessGranted(int accessGranted) {
         this.accessGranted = accessGranted;
+    }
+
+    public int getVisaID() {
+        return visaID;
+    }
+
+    public void setVisaID(int visaID) {
+        this.visaID = visaID;
+    }
+
+    public String getFirstNameDependent() {
+        return FirstNameDependent;
+    }
+
+    public void setFirstNameDependent(String firstNameDependent) {
+        FirstNameDependent = firstNameDependent;
+    }
+
+    public String getLastNameDependent() {
+        return LastNameDependent;
+    }
+
+    public void setLastNameDependent(String lastNameDependent) {
+        LastNameDependent = lastNameDependent;
+    }
+
+    public int getApproval() {
+        return approval;
+    }
+
+    public void setApproval(int approval) {
+        this.approval = approval;
     }
 
     public void printInformation() {
@@ -115,7 +153,7 @@ public class Immigrant {
         System.out.println("Address: " + address);
         System.out.println("Phone Number: " + phoneNumber);
         System.out.println("Email: " + email);
-        System.out.println("Patient Type: " + patientType);
+        System.out.println("Patient Type: " + dependent);
     }
 
 

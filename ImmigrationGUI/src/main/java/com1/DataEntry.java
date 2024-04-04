@@ -28,6 +28,7 @@ public class DataEntry extends Application {
         primaryStage.setTitle("Data Entry");
         setupUI(primaryStage);
         primaryStage.show();
+
     }
 
     // Method to setup UI elements
@@ -42,96 +43,117 @@ public class DataEntry extends Application {
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         grid.add(scenetitle, 0, 0, 2, 1);
 
-        Label firstName = new Label("First Name:");
+        Label firstName = new Label("First Name of petitioner:");
         grid.add(firstName, 0, 1);
 
         TextField firstNameTextField = new TextField();
         grid.add(firstNameTextField, 1, 1);
 
-        Label lastName = new Label("Last Name:");
+        Label lastName = new Label("Last Name of petitioner:");
         grid.add(lastName, 0, 2);
 
         TextField lastNameTextField = new TextField();
         grid.add(lastNameTextField, 1, 2);
 
+        Label firstNameDependentLabel = new Label("First Name of Dependent:");
+        grid.add(firstNameDependentLabel, 0, 3);
+
+        TextField firstNameDependentTextField = new TextField();
+        grid.add(firstNameDependentTextField, 1, 3);
+
+        Label lastNameDependentLabel = new Label("Last Name of Dependent:");
+        grid.add(lastNameDependentLabel, 0, 4);
+
+        TextField lastNameDependentTextField = new TextField();
+        grid.add(lastNameDependentTextField, 1, 4);
+
         Label dob = new Label("Date of Birth:");
-        grid.add(dob, 0, 3);
+        grid.add(dob, 0, 5);
 
         TextField dobTextField = new TextField();
-        grid.add(dobTextField, 1, 3);
+        grid.add(dobTextField, 1, 5);
 
         Label gender = new Label("Gender:");
-        grid.add(gender, 0, 4);
+        grid.add(gender, 0, 6);
 
         ComboBox<String> genderComboBox = new ComboBox<>();
         genderComboBox.getItems().addAll("Male", "Female", "Other");
-        grid.add(genderComboBox, 1, 4);
+        grid.add(genderComboBox, 1, 6);
 
         Label nationality = new Label("Nationality:");
-        grid.add(nationality, 0, 5);
+        grid.add(nationality, 0, 7);
 
         TextField nationalityTextField = new TextField();
-        grid.add(nationalityTextField, 1, 5);
+        grid.add(nationalityTextField, 1, 7);
 
         Label address = new Label("Address:");
-        grid.add(address, 0, 6);
+        grid.add(address, 0, 8);
 
         TextField addressTextField = new TextField();
-        grid.add(addressTextField, 1, 6);
+        grid.add(addressTextField, 1, 8);
 
         Label phoneNumber = new Label("Phone Number:");
-        grid.add(phoneNumber, 0, 7);
+        grid.add(phoneNumber, 0, 9);
 
         TextField phoneNumberTextField = new TextField();
-        grid.add(phoneNumberTextField, 1, 7);
+        grid.add(phoneNumberTextField, 1, 9);
 
         Label email = new Label("Email:");
-        grid.add(email, 0, 8);
+        grid.add(email, 0, 10);
 
         TextField emailTextField = new TextField();
-        grid.add(emailTextField, 1, 8);
+        grid.add(emailTextField, 1, 10);
 
         Label patientType = new Label("Patient Type:");
-        grid.add(patientType, 0, 9);
+        grid.add(patientType, 0, 11);
 
-        ComboBox<String> patientTypeComboBox = new ComboBox<>();
-        patientTypeComboBox.getItems().addAll("Fiance", "Children", "Fiancee");
-        grid.add(patientTypeComboBox, 1, 9);
+        ComboBox<String> dependentComboBox = new ComboBox<>();
+        dependentComboBox.getItems().addAll("Fiance", "Children", "Fiancee");
+        grid.add(dependentComboBox, 1, 11);
+
+        Label visaIDLabel = new Label("Visa ID:");
+        grid.add(visaIDLabel, 0, 12);
+
+        TextField visaIDTextField = new TextField();
+        grid.add(visaIDTextField, 1, 12);
 
         Button btn = new Button("Submit");
         HBox hbBtn = new HBox(10);
         hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
         hbBtn.getChildren().add(btn);
-        grid.add(hbBtn, 1, 10);
+        grid.add(hbBtn, 1, 13);
 
         final Text actiontarget = new Text();
-        grid.add(actiontarget, 0, 11);
+        grid.add(actiontarget, 0, 14);
         grid.setColumnSpan(actiontarget, 2);
         actiontarget.setFill(Color.FIREBRICK);
 
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e) {
-                // You can access the entered data using the text fields and combo boxes
+                // Retrieve values from UI elements
                 String firstName = firstNameTextField.getText();
                 String lastName = lastNameTextField.getText();
+                String firstNameDependent = firstNameDependentTextField.getText();
+                String lastNameDependent = lastNameDependentTextField.getText();
                 String dob = dobTextField.getText();
                 String selectedGender = genderComboBox.getValue();
                 String nationality = nationalityTextField.getText();
                 String address = addressTextField.getText();
                 String phoneNumber = phoneNumberTextField.getText();
                 String email = emailTextField.getText();
-                String selectedPatientType = patientTypeComboBox.getValue();
+                String dependent = dependentComboBox.getValue();
+                int visaID = Integer.parseInt(visaIDTextField.getText());
 
                 // Validate if all fields are filled
                 if (firstName.isEmpty() || lastName.isEmpty() || dob.isEmpty() || selectedGender == null ||
                         nationality.isEmpty() || address.isEmpty() || phoneNumber.isEmpty() || email.isEmpty() ||
-                        selectedPatientType == null) {
+                        dependent == null || firstNameDependent.isEmpty() || lastNameDependent.isEmpty()) {
                     actiontarget.setText("Please fill in all fields!");
                 } else {
                     // Create a new Immigrant object
                     Immigrant immigrant = new Immigrant(firstName, lastName, dob, selectedGender, nationality,
-                            address, phoneNumber, email, selectedPatientType);
+                            address, phoneNumber, email, dependent, firstNameDependent, lastNameDependent, visaID);
 
                     // Add the immigrant to the immigrantList
                     ApplicationDriver.immigrantList.add(immigrant);
@@ -142,8 +164,8 @@ public class DataEntry extends Application {
                     // Notify user of successful data entry
                     actiontarget.setText("Immigrant added successfully!");
 
-                    immigrant.printInformation();
-                    System.out.println(ApplicationDriver.immigrantList.size());
+                    // Print immigrant details
+
                 }
             }
 
@@ -157,11 +179,14 @@ public class DataEntry extends Application {
                 addressTextField.clear();
                 phoneNumberTextField.clear();
                 emailTextField.clear();
-                patientTypeComboBox.getSelectionModel().clearSelection();
+                dependentComboBox.getSelectionModel().clearSelection();
+                firstNameDependentTextField.clear();
+                lastNameDependentTextField.clear();
+                visaIDTextField.clear();
             }
         });
 
-        Scene scene = new Scene(grid, 400, 450);
+        Scene scene = new Scene(grid, 400, 550);
         primaryStage.setScene(scene);
     }
 }
