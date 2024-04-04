@@ -8,7 +8,7 @@ import java.util.LinkedList;
 public class ApplicationDriver extends Application {
 
     private Login login;
-    private DataEntry dataEntry;
+    //private DataEntry dataEntry;
 
     static public LinkedList<Immigrant> immigrantList = new LinkedList<>();
 
@@ -16,7 +16,7 @@ public class ApplicationDriver extends Application {
     public void start(Stage primaryStage) {
         // Initialize Login and DataEntry instances
         login = new Login(this);
-        dataEntry = new DataEntry();
+       // dataEntry = new DataEntry();
 
         // Start with the login page
         login.start(primaryStage);
@@ -25,6 +25,7 @@ public class ApplicationDriver extends Application {
     // Method to handle successful login for data entry
     public void handleSuccessfulLoginDataEntry() {
         Stage dataEntryStage = new Stage();
+        DataEntry dataEntry = new DataEntry();
         // Close the login window
         login.stop();
         // Open the data entry window
@@ -40,10 +41,11 @@ public class ApplicationDriver extends Application {
     // Method to handle successful login for review
     public void handleSuccessfulLoginReview() {
         Stage reviewStage = new Stage();
+        Review review = new Review();
         // Close the login window
         login.stop();
         // Open the data entry window
-        dataEntry.start(reviewStage);
+        review.start(reviewStage);
 
         // Set event handler for when data entry window closes
         reviewStage.setOnCloseRequest(event -> {
@@ -58,7 +60,7 @@ public class ApplicationDriver extends Application {
         // Close the login window
         login.stop();
         // Open the data entry window
-        dataEntry.start(approveStage);
+     //   dataEntry.start(approveStage);
 
         // Set event handler for when data entry window closes
         approveStage.setOnCloseRequest(event -> {
