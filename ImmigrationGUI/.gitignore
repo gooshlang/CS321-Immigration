@@ -3,11 +3,20 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+.idea/sonarlint/issuestore/7/3/73edee9ad4d830d0d7c969a70e6e9af5d7a732e8
+.idea/sonarlint/issuestore/b/9/b98fc1607e61b6ed439b96d857ef40cc23ed57a3
+.idea/sonarlint/issuestore/d/3/d3337a0293d75928f1109ca15a94f4395065fe5e
+.idea/sonarlint/issuestore/d/8/d82e777e936b206f02e742e0470ebc031a0b4334
+.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/securityhotspotstore/index.pb
+
+
 ### IntelliJ IDEA ###
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/*
 *.iws
 *.iml
 *.ipr
